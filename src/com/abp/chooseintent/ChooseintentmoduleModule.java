@@ -155,6 +155,7 @@ public class ChooseintentmoduleModule extends KrollModule {
 		}
 	}
 	
+	// using the titanium intent syntax the proxy will create an intent
 	private Intent handleCreationArgs(HashMap args) {		
 		if (args.containsKey("packageStr")) {
 			packageStr = args.get("packageStr").toString();

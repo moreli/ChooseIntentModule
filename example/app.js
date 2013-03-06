@@ -11,7 +11,7 @@ var chooseintent = require('com.abp.chooseintent');
 Ti.API.info("module is => " + chooseintent);
 
 //create object instance, a parasitic subclass of Observable
-var self = Ti.UI.createView();
+var view = Ti.UI.createView();
 
 var shareButton = Titanium.UI.createButton({
 	title : 'Is Intent Available',
@@ -54,7 +54,7 @@ var share5Button = Titanium.UI.createButton({
 });
 
 var share6Button = Titanium.UI.createButton({
-	title : 'Delete Intent',
+	title : 'Delete Last Intent',
 	top : '110dp',
 	width : '45%',
 	right : '2dp',
@@ -91,15 +91,15 @@ var progressLabel = Titanium.UI.createLabel({
 	textAlignment : 'center'
 });
 
-self.add(shareButton);
-self.add(share2Button);
-self.add(share3Button);
-self.add(share4Button);
-self.add(share5Button);
-self.add(share6Button);
-self.add(progressLabel);
-self.add(intentField);
-self.add(packageField);
+view.add(shareButton);
+view.add(share2Button);
+view.add(share3Button);
+view.add(share4Button);
+view.add(share5Button);
+view.add(share6Button);
+view.add(progressLabel);
+view.add(intentField);
+view.add(packageField);
 
 shareButton.addEventListener('click', function() {
 	var intent = {
